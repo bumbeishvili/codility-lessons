@@ -108,8 +108,7 @@ function solution(A) {
 function solution(X, A) {
     var count = X;
     var arr = Array(X).fill().map(d=>true);
-    var k= A.length;
-    for( var i=0; i<A.length; i++){
+    for(var i=0; i<A.length; i++){
         var el = A[i]-1;
         if(arr[el]){
             arr[el]=false;
