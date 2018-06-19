@@ -127,14 +127,20 @@ function solution(X, A) {
 
 ```javascript
 function solution(A) {
-  var map = Array(A.length+1).fill().map(d=>true);
-  
-  A.forEach(d=>{
-     map[d-1] = false
-  });
-  
-  return map.indexOf(true)+1
-
+    var arr = Array(A.length).fill().map(d=>true);
+    A.forEach(d=>{
+        if(d>0 && d<A.length){
+            arr[d] = false;
+        }
+    })
+    arr[0]=false;
+    var index =  arr.indexOf(true);
+    if(index==-1){
+        if(arr.length==1 && A[0]!=1){ return 1;}
+        return A.length+1
+    }else{
+        return index
+    }
 }
 ```
 
