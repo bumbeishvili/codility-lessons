@@ -60,16 +60,8 @@ function solution(A) {
 
 
 ```javascript
-function solution(A, K) {
-   K = K % A.length
-   return A.map((d,i,arr)=>{
-      if(i-K>=0){
-          return arr[i-K]
-      }
-      else{
-         return arr[arr.length+i-K]
-      }
-   })
+function solution(X, Y, D) {
+  return Math.ceil((Y-X)/D)
 }
 ```
 
