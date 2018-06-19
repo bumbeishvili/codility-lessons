@@ -52,3 +52,55 @@ function solution(A) {
 }
 ```
 
+
+
+# Lesson 3 - Time Complexity
+
+## FrogJmp
+
+
+```javascript
+function solution(A, K) {
+   K = K % A.length
+   return A.map((d,i,arr)=>{
+      if(i-K>=0){
+          return arr[i-K]
+      }
+      else{
+         return arr[arr.length+i-K]
+      }
+   })
+}
+```
+
+## PermMissingElem
+
+```javascript
+function solution(A) {
+    var obj = {};
+    A.forEach(d=>{
+      obj[d] = !obj[d]; 
+    });
+    var value = Object.keys(obj).filter(key=>obj[key])[0];
+
+    return Number(value);
+    // write your code in JavaScript (Node.js 8.9.4)
+}
+```
+
+
+## TapeEquilibrium
+
+
+```javascript
+function solution(A) {
+    var obj = {};
+    A.forEach(d=>{
+      obj[d] = !obj[d]; 
+    });
+    var value = Object.keys(obj).filter(key=>obj[key])[0];
+
+    return Number(value);
+    // write your code in JavaScript (Node.js 8.9.4)
+}
+```
