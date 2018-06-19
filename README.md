@@ -96,3 +96,67 @@ function solution(A) {
     // write your code in JavaScript (Node.js 8.9.4)
 }
 ```
+
+
+
+# Lesson 4 - Time Complexity
+
+## FrogRiverOne
+
+
+```javascript
+function solution(X, Y, D) {
+  return Math.ceil((Y-X)/D)
+}
+```
+
+## MissingInteger
+
+
+```javascript
+function solution(A) {
+  var map = Array(A.length+1).fill().map(d=>true);
+  
+  A.forEach(d=>{
+     map[d-1] = false
+  });
+  
+  return map.indexOf(true)+1
+
+}
+```
+
+
+## PermCheck
+
+
+
+```javascript
+function solution(A) {
+    var obj = {};
+    A.forEach(d=>{
+      obj[d] = !obj[d]; 
+    });
+    var value = Object.keys(obj).filter(key=>obj[key])[0];
+
+    return Number(value);
+    // write your code in JavaScript (Node.js 8.9.4)
+}
+```
+
+## MaxCounters
+
+
+
+```javascript
+function solution(A) {
+    var obj = {};
+    A.forEach(d=>{
+      obj[d] = !obj[d]; 
+    });
+    var value = Object.keys(obj).filter(key=>obj[key])[0];
+
+    return Number(value);
+    // write your code in JavaScript (Node.js 8.9.4)
+}
+```
