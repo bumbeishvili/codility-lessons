@@ -151,14 +151,16 @@ function solution(A) {
 
 ```javascript
 function solution(A) {
-    var obj = {};
+    var arr = A.map(d=>0);
     A.forEach(d=>{
-      obj[d] = !obj[d]; 
-    });
-    var value = Object.keys(obj).filter(key=>obj[key])[0];
-
-    return Number(value);
-    // write your code in JavaScript (Node.js 8.9.4)
+        if((d-1>=0) && (d-1)<A.length){
+            arr[d-1]++; 
+        }
+       
+    })
+    
+    var onesCount = arr.filter(d=>d==1).length;
+    return onesCount == A.length?1:0
 }
 ```
 
