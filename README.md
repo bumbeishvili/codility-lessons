@@ -18,3 +18,38 @@ function solution(N) {
       return result;
 }
 ```
+
+
+# Lesson 2 - Arrays
+
+## CyclicRotation
+
+```javascript
+function solution(A, K) {
+   K = K % A.length
+   return A.map((d,i,arr)=>{
+      if(i-K>=0){
+          return arr[i-K]
+      }
+      else{
+         return arr[arr.length+i-K]
+      }
+   })
+}
+```
+
+## OddOccurrencesInArray
+```javascript
+function solution(A, K) {
+   K = K % A.length
+   return A.map((d,i,arr)=>{
+      if(i-K>=0){
+          return arr[i-K]
+      }
+      else{
+         return arr[arr.length+i-K]
+      }
+   })
+}
+```
+
