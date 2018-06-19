@@ -69,14 +69,14 @@ function solution(X, Y, D) {
 
 ```javascript
 function solution(A) {
-    var obj = {};
-    A.forEach(d=>{
-      obj[d] = !obj[d]; 
-    });
-    var value = Object.keys(obj).filter(key=>obj[key])[0];
+  var map = Array(A.length+1).fill().map(d=>true);
+  
+  A.forEach(d=>{
+     map[d-1] = false
+  });
+  
+  return map.indexOf(true)+1
 
-    return Number(value);
-    // write your code in JavaScript (Node.js 8.9.4)
 }
 ```
 
