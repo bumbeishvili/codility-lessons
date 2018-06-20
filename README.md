@@ -169,14 +169,32 @@ function solution(A) {
 
 
 ```javascript
-function solution(A) {
-    var obj = {};
-    A.forEach(d=>{
-      obj[d] = !obj[d]; 
-    });
-    var value = Object.keys(obj).filter(key=>obj[key])[0];
-
-    return Number(value);
-    // write your code in JavaScript (Node.js 8.9.4)
+function solution(N,A){
+    var result = Array(N).fill().map(d=>0);
+    
+    var max = 0;
+    var diff = 0;
+    
+    A.forEach(X=>{
+        var ind = X-1;
+        if(X!=(N+1)){
+            if(diff>result[ind]){
+                result[ind] = diff+1
+            }else{
+                result[ind]++;
+            }
+            
+            if(result[ind]>max){
+                max=result[ind];
+            }
+        }else{
+            diff=max;
+        }
+    })
+    
+    return result.map(d=>{
+        return Math.max(diff,d);
+    })
+    
 }
 ```
